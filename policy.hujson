@@ -20,8 +20,8 @@
   // Access control lists.
   "ACLs": [
     // { "Action": "accept", "Users": ["*"], "Ports": ["vm-subnet:*"] },
-    // { "Action": "accept", "Users": ["*"], "Ports": ["autogroup:self:*"] },
-    // { "Action": "accept", "Users": ["group:admins"], "Ports": ["*:*"] },
+    { "Action": "accept", "Users": ["*"], "Ports": ["autogroup:self:*"] },
+    { "Action": "accept", "Users": ["group:admins"], "Ports": ["*:*"] },
     { "Action": "accept", "Users": ["*"], "Ports": ["*:*"] },
   ],
 }
