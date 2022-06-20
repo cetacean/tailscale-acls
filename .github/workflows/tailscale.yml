@@ -15,16 +15,21 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
+      - name: Setup Go environment
+        uses: actions/setup-go@v3.2.0
+              
       - name: Deploy ACL
         if: github.event_name == 'push'
         env:
           TS_API_KEY: ${{ secrets.TS_API_KEY }}
+          TS_TAILNET: ${{ secrets.TS_TAILNET }}
         run: |
-          echo "TODO(Xe): apply ACL changes"
+          go run . apply
 
       - name: ACL tests
         if: github.event_name == 'pull_request'
         env:
           TS_API_KEY: ${{ secrets.TS_API_KEY }}
+          TS_TAILNET: ${{ secrets.TS_TAILNET }}
         run: |
-          echo "TODO(Xe): ACL testing"
+          go run . test
