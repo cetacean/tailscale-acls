@@ -24,8 +24,14 @@ func main() {
 	ctx, cancel := context.WithTimeout(context.Background(), *timeout)
 	defer cancel()
 
-	tailnet := os.Getenv("TS_TAILNET")
-	apiKey := os.Getenv("TS_API_KEY")
+	tailnet, ok := os.LookupEnv("TS_TAILNET")
+	if !ok {
+		log.Fatal("set envvar TS_TAILNET to your tailnet's name")
+	}
+	apiKey, ok := os.LookupEnv("TS_API_KEY")
+	if !ok {
+		log.Fatal("set envvar TS_API_KEY to your Tailscale API key")
+	}
 
 	switch flag.Arg(0) {
 	case "apply":
