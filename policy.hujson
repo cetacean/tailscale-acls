@@ -28,8 +28,8 @@
     {
       "action": "accept",
       "src": ["group:admins"],
-      "dst": ["*"],
-      "users": ["root", "autogroup:nonroot"]
-    }
+      "dst": ["tag:nixos"],
+      "users": ["root", "autogroup:nonroot"],
+    },
   ]
 }
