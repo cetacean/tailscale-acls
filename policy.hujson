@@ -26,6 +26,12 @@
   ],
   "ssh": [
     {
+      "action": "accept",
+      "src": ["tag:alrest"],
+      "dst": ["tag:alrest"],
+      "users": ["root", "autogroup:nonroot"],
+    },
+    {
       "action": "check",
       "src": ["group:admins"],
       "dst": ["tag:alrest"],
