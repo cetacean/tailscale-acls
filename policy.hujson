@@ -32,10 +32,16 @@
       "users": ["root", "autogroup:nonroot"],
     },
     {
+      "action": "accept",
+      "src": ["group:admins"],
+      "dst": ["tag:alrest"],
+      "users": ["autogroup:nonroot"]
+    },
+    {
       "action": "check",
       "src": ["group:admins"],
       "dst": ["tag:alrest"],
-      "users": ["root", "cadey", "vic"],
+      "users": ["root"],
     },
   ]
 }
