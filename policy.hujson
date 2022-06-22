@@ -26,10 +26,10 @@
   ],
   "ssh": [
     {
-      "action": "accept",
+      "action": "check",
       "src": ["group:admins"],
       "dst": ["tag:alrest"],
-      "users": ["root", "autogroup:nonroot"],
+      "users": ["root", "cadey", "vic"],
     },
   ]
 }
