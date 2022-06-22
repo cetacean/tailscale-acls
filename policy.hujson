@@ -28,7 +28,7 @@
     {
       "action": "accept",
       "src": ["group:admins"],
-      "dst": ["tag:nixos"],
+      "dst": ["tag:alrest"],
       "users": ["root", "autogroup:nonroot"],
     },
   ]
