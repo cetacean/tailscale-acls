@@ -27,7 +27,7 @@
   "ssh": [
     {
       "action": "check",
-      "src": ["group:admins", "tag:alrest"],
+      "src": ["group:admins"],
       "dst": ["tag:alrest"],
       "users": ["root", "cadey", "vic"],
     },
