@@ -1,13 +1,13 @@
 {
-  "Groups": {
+  "groups": {
     "group:admins": [ "xe@github", "victorvalenca@github" ],
     "group:low-trust": [ "twi@github" ],
     "group:within": [ "xe@github", "victorvalenca@github", "heartmender@github" ],
   },
-  "Hosts": {
+  "hosts": {
     "vm-subnet": "10.77.0.0/17",
   },
-  "TagOwners": {
+  "tagOwners": {
     "tag:nixos": [ "group:admins" ],
     "tag:hypervisor": [ "group:admins" ],
     "tag:hetzner": [ "group:admins" ],
@@ -18,10 +18,18 @@
     "tag:sensitive": [ "group:admins" ],
   },
   // Access control lists.
-  "ACLs": [
+  "acls": [
     // { "Action": "accept", "Users": ["*"], "Ports": ["vm-subnet:*"] },
     { "Action": "accept", "Users": ["*"], "Ports": ["autogroup:self:*"] },
     { "Action": "accept", "Users": ["group:admins"], "Ports": ["*:*"] },
     { "Action": "accept", "Users": ["*"], "Ports": ["*:*"] },
   ],
+  "ssh": [
+    {
+      "action": "accept",
+      "src": ["group:admins"],
+      "dst": ["*"],
+      "users": ["root", "autogroup:nonroot"]
+    }
+  ]
 }
