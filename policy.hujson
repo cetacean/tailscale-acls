@@ -16,6 +16,7 @@
     "tag:vm": [ "group:admins" ],    
     "tag:alrest": [ "group:admins" ],
     "tag:sensitive": [ "group:admins" ],
+    "tag:games": [ "group:admins" ],
   },
   // Access control lists.
   "acls": [
@@ -32,10 +33,16 @@
       "users": ["root", "autogroup:nonroot"],
     },
     {
-        "action": "accept",
-        "src": ["group:admins"],
-        "dst": ["tag:vm"],
-        "users": ["autogroup:nonroot", "root"]
+      "action": "accept",
+      "src": ["group:admins"],
+      "dst": ["tag:games"],
+      "users": ["autogroup:nonroot", "root"]
+    },
+    {
+      "action": "accept",
+      "src": ["group:admins"],
+      "dst": ["tag:vm"],
+      "users": ["autogroup:nonroot", "root"]
     },
     {
       "action": "accept",
