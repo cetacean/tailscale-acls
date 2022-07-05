@@ -41,7 +41,7 @@
     },
     {
       "action": "accept",
-      "src": ["xe@github"],
+      "src": ["xe@github", "tag:alrest"],
       "dst": ["tag:xe"],
       "users": ["autogroup:nonroot", "root"]
     },
