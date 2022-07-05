@@ -17,6 +17,7 @@
     "tag:alrest": [ "group:admins" ],
     "tag:sensitive": [ "group:admins" ],
     "tag:games": [ "group:admins" ],
+    "tag:xe": [ "xe@github" ],
   },
   // Access control lists.
   "acls": [
@@ -36,6 +37,12 @@
       "action": "accept",
       "src": ["group:admins"],
       "dst": ["tag:games"],
+      "users": ["autogroup:nonroot", "root"]
+    },
+    {
+      "action": "accept",
+      "src": ["xe@github"],
+      "dst": ["tag:xe"],
       "users": ["autogroup:nonroot", "root"]
     },
     {
