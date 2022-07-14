@@ -13,25 +13,21 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Setup Go environment
-        uses: actions/setup-go@v3.2.0
-
-      - name: Install gitops-pusher
-        run: go install tailscale.com/cmd/gitops-pusher@main
-
       - name: Deploy ACL
         if: github.event_name == 'push'
-        env:
-          TS_API_KEY: ${{ secrets.TS_API_KEY }}
-          TS_TAILNET: ${{ secrets.TS_TAILNET }}
-        run: |
-          ~/go/bin/gitops-pusher --policy-file ./policy.hujson apply
+        id: deploy-acl
+        uses: cetacean/tailscale-gitops@v1
+        with:
+          api-key: ${{ secrets.TS_API_KEY }}
+          tailnet: ${{ secrets.TS_TAILNET }}
+          action: apply
 
       - name: ACL tests
         if: github.event_name == 'pull_request'
-        env:
-          TS_API_KEY: ${{ secrets.TS_API_KEY }}
-          TS_TAILNET: ${{ secrets.TS_TAILNET }}
-        run: |
-          ~/go/bin/gitops-pusher --policy-file ./policy.hujson test
+        id: test-acl
+        uses: cetacean/tailscale-gitops@v1
+        with:
+          api-key: ${{ secrets.TS_API_KEY }}
+          tailnet: ${{ secrets.TS_TAILNET }}
+          action: test
 
