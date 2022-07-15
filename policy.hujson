@@ -3,7 +3,7 @@
     "group:admins": [ "xe@github", "victorvalenca@github" ],
     "group:low-trust": [ "twi@github" ],
     "group:within": [ "xe@github", "victorvalenca@github", "heartmender@github" ],
-  },
+  }, {},
   "hosts": {
     "vm-subnet": "10.77.0.0/17",
   },
@@ -13,7 +13,7 @@
     "tag:hetzner": [ "group:admins" ],
     "tag:ci": [ "group:admins" ],
     "tag:alpine": [ "group:admins" ],
-    "tag:vm": [ "group:admins" ],    
+    "tag:vm": [ "group:admins" ],
     "tag:alrest": [ "group:admins" ],
     "tag:sensitive": [ "group:admins" ],
     "tag:games": [ "group:admins" ],
