@@ -3,7 +3,7 @@
     "group:admins": [ "xe@github", "victorvalenca@github" ],
     "group:low-trust": [ "twi@github" ],
     "group:within": [ "xe@github", "victorvalenca@github", "heartmender@github" ],
-  }, {}
+  },
   "hosts": {
     "vm-subnet": "10.77.0.0/17",
   },
