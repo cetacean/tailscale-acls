@@ -1,3 +1,4 @@
+// This file is managed in https://github.com/cetacean/tailscale-acls, do not edit in the admin panel
 {
   "groups": {
     "group:admins": [ "xe@github", "victorvalenca@github" ],
