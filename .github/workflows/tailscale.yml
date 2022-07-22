@@ -17,8 +17,8 @@ jobs:
         id: fetch-old-version
         uses: actions/cache@v3
         with:
-        path: .
-        key: version-cache.json
+          path: .
+          key: version-cache.json
 
       - name: Deploy ACL
         if: github.event_name == 'push'
