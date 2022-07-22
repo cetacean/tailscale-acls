@@ -21,10 +21,10 @@
   },
   // Access control lists.
   "acls": [
-    // { "Action": "accept", "Users": ["*"], "Ports": ["vm-subnet:*"] },
-    { "Action": "accept", "Users": ["*"], "Ports": ["autogroup:self:*"] },
-    { "Action": "accept", "Users": ["group:admins"], "Ports": ["*:*"] },
-    { "Action": "accept", "Users": ["*"], "Ports": ["*:*"] },
+    // { "action": "accept", "src": ["*"], "dst": ["vm-subnet:*"] },
+    { "action": "accept", "src": ["*"], "dst": ["autogroup:self:*"] },
+    { "action": "accept", "src": ["group:admins"], "dst": ["*:*"] },
+    { "action": "accept", "src": ["*"], "dst": ["*:*"] },
   ],
   "ssh": [
     {
