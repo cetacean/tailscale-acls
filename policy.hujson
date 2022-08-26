@@ -41,6 +41,18 @@
     },
     {
       "action": "accept",
+      "src": ["group:admins"],
+      "dst": ["tag:ci"],
+      "users": ["autogroup:nonroot", "root"]
+    },
+    {
+      "action": "accept",
+      "src": ["tag:ci"],
+      "dst": ["tag:ci"],
+      "users": ["ci"]
+    },
+    {
+      "action": "accept",
       "src": ["xe@github", "tag:alrest"],
       "dst": ["tag:xe"],
       "users": ["autogroup:nonroot", "root"]
