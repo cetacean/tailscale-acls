@@ -1,4 +1,6 @@
-{ // This file is managed in https://github.com/cetacean/tailscale-acls, do not edit in the admin panel
+// This tailnet's ACLs are maintained in https://github.com/cetacean/tailscale-acls, do not edit in the admin panel
+
+{
   "groups": {
     "group:admins": [ "xe@github", "victorvalenca@github" ],
     "group:low-trust": [ "twi@github" ],
