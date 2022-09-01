@@ -28,6 +28,10 @@
     { "action": "accept", "src": ["group:admins"], "dst": ["*:*"] },
     { "action": "accept", "src": ["*"], "dst": ["*:*"] },
   ],
+  // tests
+  "tests": [
+    { "src": ["xe@github"], "accept": ["tag:nixos"] },
+  ]
   "ssh": [
     {
       "action": "accept",
