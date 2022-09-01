@@ -30,8 +30,8 @@
   ],
   // tests
   "tests": [
-    { "src": ["xe@github"], "deny": ["tag:nixos:22"] },
-  ]
+    { "src": "xe@github", "deny": ["tag:nixos:22"] },
+  ],
   "ssh": [
     {
       "action": "accept",
