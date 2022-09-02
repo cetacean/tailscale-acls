@@ -20,6 +20,7 @@
     "tag:sensitive": [ "group:admins" ],
     "tag:games": [ "group:admins" ],
     "tag:xe": [ "xe@github" ],
+    "tag:service": [ "group:admins" ],
   },
   // Access control lists.
   "acls": [
