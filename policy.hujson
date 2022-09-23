@@ -44,7 +44,7 @@
     },
     {
       "action": "accept",
-      "src": ["group:admins"],
+      "src": ["group:admins", "tag:alrest"],
       "dst": ["tag:ci"],
       "users": ["autogroup:nonroot", "root"]
     },
@@ -52,7 +52,7 @@
       "action": "accept",
       "src": ["tag:ci"],
       "dst": ["tag:ci"],
-      "users": ["ci"]
+      "users": ["autogroup:nonroot", "root"]
     },
     {
       "action": "accept",
