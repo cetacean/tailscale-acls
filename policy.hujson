@@ -21,6 +21,7 @@
     "tag:games": [ "group:admins" ],
     "tag:xe": [ "xe@github" ],
     "tag:service": [ "group:admins" ],
+    "tag:test": [ "xe@github" ],
   },
   // Access control lists.
   "acls": [
