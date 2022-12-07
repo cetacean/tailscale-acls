@@ -79,5 +79,15 @@
       "dst": ["tag:alrest"],
       "users": ["root"],
     },
-  ]
+  ],
+  "nodeAttrs": [
+    {
+      "target": ["group:admins"],
+      "attr": ["funnel"],
+    },
+    {
+      "target": ["tag:service"],
+      "attr": ["funnel"],
+    }
+  ],
 }
