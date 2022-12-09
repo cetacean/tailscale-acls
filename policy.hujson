@@ -88,6 +88,10 @@
     {
       "target": ["tag:service"],
       "attr": ["funnel"],
+    },
+    {
+      "target": ["tag:alrest"],
+      "attr": ["funnel"],
     }
   ],
 }
