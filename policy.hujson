@@ -33,7 +33,7 @@
   "ssh": [
     {
       "action": "accept",
-      "src": ["tag:alrest"],
+      "src": ["tag:alrest", "tag:nixos"],
       "dst": ["tag:alrest"],
       "users": ["root", "autogroup:nonroot"],
     },
