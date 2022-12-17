@@ -30,6 +30,9 @@
     { "action": "accept", "src": ["group:admins"], "dst": ["*:*"] },
     { "action": "accept", "src": ["*"], "dst": ["*:*"] },
   ],
+  "tests": [
+    { "src": "xe@github", "proto": "1", "accept": [ "tag:alrest" ] }
+  ],
   "ssh": [
     {
       "action": "accept",
